@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts": "tsc --watch",
-    "lint":"eslint '*/**/*.{ts,tsx}' --quiet",
-    "lint:fix":"eslint '*/**/*.{ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{ts,tsx}' --quiet",
+    "lint:fix": "eslint '*/**/*.{ts,tsx}' --quiet --fix"
   },
   "author": "",
   "license": "ISC",

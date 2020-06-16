@@ -1,3 +1,7 @@
 {
-  "markdown-todo.sortByCount": false
+  "markdown-todo.sortByCount": false,
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": false,
+  "typescript.quickSuggestionsForPaths": false,
+  "path-intellisense.absolutePathToWorkspace": false
 }

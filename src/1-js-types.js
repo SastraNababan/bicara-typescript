@@ -3,20 +3,22 @@
 
 /********** Javascript Types ***********/
 
-let a;                  // undefined
-let b = true;           // boolean
-let c = 1;              // number
-let d = "hello";        // string
-let e = 100n;           // big int (starting ES2020)
-let f = Symbol("Sym");  // symbol  (starting ES2015)
-let g = function () {   // function
+let a; // undefined
+let b = true; // boolean
+let c = 1; // number
+let d = "hello"; // string
+let e = 100n; // big int (starting ES2020)
+let f = Symbol("Sym"); // symbol  (starting ES2015)
+let g = function () {
+  // function
   return null;
 };
-let h = null;           // null ( special primitive )
-let i = {};             // Object Literal
-let j = [];             // array
+let h = null; // null ( special primitive )
+let i = {}; // Object Literal
+let j = []; // array
 
-class Product {         // class
+class Product {
+  // class
   //...
 }
 let k = new Product();
@@ -64,3 +66,10 @@ function fruitsCollection(item, ...restItems) {
   return item + " " + restItems.join(" ");
 }
 console.log(fruitsCollection("apple", "manggo", "durian"));
+
+let product = {
+  id: "ID-1",
+  productName: "Macbook Air",
+  price: 2000,
+  note: "",
+};

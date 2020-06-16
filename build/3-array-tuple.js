@@ -2,13 +2,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 let list;
 list = [1, 2, 3, 4];
+list = [2, 3, 4];
 console.log(list);
 let list2;
 list2 = ["hello", "world", "test"];
+console.log(list2);
 let list3;
 list3 = ["hello", 1];
+console.log(list3);
 let list3_1 = ["hello", 1];
 list3_1 = [1, 2, 3];
+let list3_2;
+list3_2 = [4, 2, 5];
 let list4;
 list4 = ["apple", 1, "apple", 123];
 let list5;

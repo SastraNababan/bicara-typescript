@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const, @typescript-eslint/no-unused-vars */
 
-export { }; // quick fix for global variable
+export {}; // quick fix for global variable
 
 /**
  * 1. function declaration & expression
@@ -8,7 +8,6 @@ export { }; // quick fix for global variable
  * 3. rest parameter
  * 4. conditional type with union, generic, overlods
  */
-
 
 /********** 1. function declaration & expression  ***********/
 /* 
@@ -53,7 +52,7 @@ function submitContact(firstName, lastName, languange, gender){
 */
 
 //========= Solution =========
-const fn = () => null
+const fn = () => null;
 function submitContact(
   firstName: string,
   lastName: string,
