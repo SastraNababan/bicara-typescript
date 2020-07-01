@@ -1,94 +1,107 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, prefer-const */
-export {}; // quick fix for global variable
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prefer-const */
+export {};
 /**
  * Array
- * 1. Array of Number [1,2,3,4]
- * 2. Array of String ['a', 'b', 'c']
- * 3. Tuple - Single Type [1,'a']
- * 4. Tuple - Multiple Type  ['a','b', 1, 2]
- * 5. Array of Object [{}]
- * 6. Array multi dimension [[]]
+ * 1. Array of Number
+ * 2. Array of String
+ * 3. Array with Union
+ * 4. Tuple
+ * 5. Array of Object
+ * 6. Array multi dimension
  * 7. Destructuring
  */
 
 /**
- * 1. Array of Number [1,2,3,4]
+ * 1. Array of Number
+ * [1,2,3,4]
  */
-// let list = [1, 2, 3, 4]; // type infere
-// let list: number[]; // square bracket
-let list: Array<number>; // generic array
-list = [1, 2, 3, 4];
-list = [2, 3, 4];
-console.log(list);
+
+// type inference
+let list1 = [1, 2, 3, 4];
+
+// square bracket
+let list1_2: number[];
+list1_2 = [1, 2, 3, 4];
+
+// generic array
+let list1_3: Array<number>;
+list1_3 = [1, 2, 3, 4];
 
 /**
- * 2. Array of String ['a', 'b', 'c']
+ * 2. Array of String
+ * ['a', 'b', 'c']
  */
-// let list2 = ["hello", "world", "test"];  // type infere
-let list2: string[]; // square bracket
-// let list2: Array<string>;  // generic array
-list2 = ["hello", "world", "test"];
-console.log(list2);
+
+// generic
+let list2: Array<string>;
+list2 = ['a', 'b', 'c'];
 
 /**
- * 3. Tuple Array  ( Fixed ) [1,'a']
+ * 3. Array with Union
+ * ["hello", 1, 2, 3 ]
  */
-let list3: [string, number];
-list3 = ["hello", 1];
-console.log(list3);
 
-// Tips : don't use type inference for tuple
-let list3_1 = ["hello", 1];
-list3_1 = [1, 2, 3];
+// type inference
+let list3_1 = ['hello', 1, 2, 3];
 
-// fix element same type
-let list3_2: [number, number, number];
-list3_2 = [4, 2, 5];
+// square bracket
+let list3_2: (string | number)[];
+list3_2 = ['hello', 1, 2, 3];
+
+// generic array
+let list3_3: Array<string | number>;
+list3_3 = ['hello', '1', 2, 3];
 
 /**
- * 4. Tuple Array ( Dynamic ) ['a','b', 1, 2]
+ * 4. Tuple
+ * ['cordinat', 2, 4, 7]
  */
-// let list4:(string | number )[];
-let list4: Array<string | number>; // union
-list4 = ["apple", 1, "apple", 123];
+
+// don't use type inference for tuple
+let list4: [string, number, number, number];
+list4 = ['cordinat', 2, 4, 7];
 
 /**
- * 5. Array of Object [{}]
+ * 5. Array of Object
+ * [
+ *   { color: 'blue', index: 1 },
+ *   { color: 'red', index: 2 },
+ * ]
  */
-// let list5: { color: string; index: number }[]; // inline interface
-let list5: Array<{ color: string; index: number }>;
-list5 = [
-  { color: "blue", index: 1 },
-  { color: "red", index: 2 },
+
+// inline interface
+let list5_1: { color: string; index: number }[];
+list5_1 = [
+    { color: 'blue', index: 1 },
+    { color: 'red', index: 2 },
 ];
 
-list5.push({ color: "green", index: 3 });
-console.log(list5);
+// generic array
+let list5_2: Array<{ color: string; index: number }>;
+list5_2 = [
+    { color: 'blue', index: 1 },
+    { color: 'red', index: 2 },
+];
 
 /**
  * 6. Array multi dimension [[]]
+ * matrix = [
+ *   [1, 2],
+ *   [3, 4],
+ * ];
  */
-let matrix: number[][];
-// let matrix: Array<Array<number>>;
+
+// let matrix: number[][];
+let matrix: Array<Array<number>>;
 matrix = [
-  [1, 2],
-  [3, 4],
-];
-
-// let matrixTuple: (number | string)[][];
-let matrixTuple: Array<Array<number | string>>;
-matrixTuple = [
-  ["one", 1],
-  [2, "two"],
+    [1, 2],
+    [3, 4],
 ];
 
 /**
  * 7. Destructuring
+ * let [a, b, c, d] = [1, 2, 3, 'four'];
  */
 
-let [a, b, c, d]: [number, number, number, string] = [1, 2, 3, "four"];
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+let [a, b, c, d]: [number, number, number, string] = [1, 2, 3, 'four'];

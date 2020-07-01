@@ -1,4 +1,6 @@
 # Bicara TypeScript
+This repo contain resource of Bicara Typescript. 
+[Youtube Series for Learn Typescript](https://www.youtube.com/SastraNababan?sub_confirmation=1)
 
 ## 1. JavaScript vs TypeScript Types
 
@@ -37,8 +39,8 @@
 
 How to declare typescript type :
 
-- Type inference ( Implicit ) `let i = "hello"`
-- Type annotations ( explicit ) `let i:string = hello`
+- Type inference ( implicit ) `let ti = "hello"`
+- Type annotations ( explicit ) `let ta:string = "hello ts"`
 
 ### Exercises :
 
@@ -46,28 +48,33 @@ How to declare typescript type :
 - [ ] Function Type
 - [ ] Union Type `|`
 - [ ] Type Aliases
-- [ ] Setup Environtment ( eslint, eslint )
+- [ ] Setup Environtment ( eslint, prettier )
 - [ ] Evaluate Typescript Config `tsconfig.json`
 
 ## 3. Array & Tuples
 
-There are two ways to declare an array:
 
+Tuples is an array with fixed size and known data types.
+
+
+There are few ways to declare an array:
 1. Using Type Inference
    `let list = [1, 2, 3, 4];`
-2. Using square brackets.
+2. Using square brackets. `elementType[]`
    `let fruits: string[] = ['Apple', 'Orange', 'Banana'];`
 3. Using a generic array type. `Array<elementType>`
    `let fruits: Array<string> = ['Apple', 'Orange', 'Banana'];`
 
+
+
 ### Exercises :
 
-- [ ] Array of Number `[1,2,3,4]`
-- [ ] Array of String `['a', 'b', 'c']`
-- [ ] Tuple Array - Single Type `[1,'a']`
-- [ ] Tuple Array - Multiple Type `['a','b', 1, 2]`
-- [ ] Array of Object `[{}]`
-- [ ] Array multidimensional`[[]]`
+- [ ] Array of Number 
+- [ ] Array of String 
+- [ ] Array with Union
+- [ ] Tuple 
+- [ ] Array of Object 
+- [ ] Array multidimensional
 - [ ] Destructuring
 
 ## 4. Object
@@ -93,3 +100,8 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 - [ ] optional & default parameters
 - [ ] rest parameter
 - [ ] conditional type with union, generic, overloads
+
+## 6. Classes
+
+## 7. Function
+## 8. Advance Types
