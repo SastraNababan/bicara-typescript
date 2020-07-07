@@ -96,3 +96,13 @@ let x = new Custom();
 console.log(x);
 x.setValue(2, 3);
 console.log(x);
+class Employee {
+    constructor(code, name) {
+        this.empCode = code;
+        this.name = name;
+    }
+    getSalary(empCode) {
+        return 20000;
+    }
+}
+let emp = new Employee(1, 'Steve');

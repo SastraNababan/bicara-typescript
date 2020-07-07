@@ -2,60 +2,60 @@
 
 export {}; // quick fix for global variable
 abstract class Root {
-    // property (attributes, method )
-    // constructor
-    abstract done: boolean;
-    abstract find(keyword: string): string;
+  // property (attributes, method )
+  // constructor
+  abstract done: boolean;
+  abstract find(keyword: string): string;
 }
 
 // base class
 class User extends Root {
-    // properties : attributes & method
-    id: number;
-    firstName: string;
-    public lastName: string; // public field
-    private token: string; // private field
-    protected save: boolean; // protected
-    readonly numberofHeads: number = 1; // readonly attributes only
-    city = 'medan';
-    static MAX_FAILED_LOGIN = 2;
-    private retryLogin = 0;
-    done = false;
+  // properties : attributes & method
+  id: number;
+  firstName: string;
+  public lastName: string; // public field
+  private token: string; // private field
+  protected save: boolean; // protected
+  readonly numberofHeads: number = 1; // readonly attributes only
+  city = 'medan';
+  static MAX_FAILED_LOGIN = 2;
+  private retryLogin = 0;
+  done = false;
 
-    find(keyword: string): string {
-        return 'result';
+  find(keyword: string): string {
+    return 'result';
+  }
+  login(userName: string, password: string): boolean | string {
+    this.retryLogin += 1;
+    if (userName === 'admin' && password === 'admin') {
+      return true;
     }
-    login(userName: string, password: string): boolean | string {
-        this.retryLogin += 1;
-        if (userName === 'admin' && password === 'admin') {
-            return true;
-        }
-        if (this.retryLogin >= User.MAX_FAILED_LOGIN) {
-            return 'max login attempted';
-        }
-        return false;
+    if (this.retryLogin >= User.MAX_FAILED_LOGIN) {
+      return 'max login attempted';
     }
+    return false;
+  }
 
-    fullName(): string {
-        return this.firstName + '  ' + this.lastName;
-    }
+  fullName(): string {
+    return this.firstName + '  ' + this.lastName;
+  }
 
-    setToken(token: string) {
-        this.token = token;
-    }
+  setToken(token: string) {
+    this.token = token;
+  }
 
-    getToken(): string {
-        return this.token;
-    }
+  getToken(): string {
+    return this.token;
+  }
 
-    constructor(id: number, firstName: string, lastName: string, token: string, save: boolean) {
-        super();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.token = token;
-        this.save = save;
-    }
+  constructor(id: number, firstName: string, lastName: string, token: string, save: boolean) {
+    super();
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.token = token;
+    this.save = save;
+  }
 }
 
 // instance
@@ -95,26 +95,26 @@ console.log(sinta.firstName);
 
 // sub-class
 class UserEnhanced extends User {
-    location: string;
+  location: string;
 
-    constructor(id: number, firstName: string, lastName: string, location: string, token: string, save: boolean) {
-        super(id, firstName, lastName, token, save);
-        // console.log(super.save);
-        this.location = location;
-        console.log(this);
-    }
+  constructor(id: number, firstName: string, lastName: string, location: string, token: string, save: boolean) {
+    super(id, firstName, lastName, token, save);
+    // console.log(super.save);
+    this.location = location;
+    console.log(this);
+  }
 
-    getSalary(): number {
-        return 1000;
-    }
+  getSalary(): number {
+    return 1000;
+  }
 
-    title(s: string): string {
-        return s + this.fullName();
-    }
+  title(s: string): string {
+    return s + this.fullName();
+  }
 
-    checkSave(): boolean {
-        return this.save;
-    }
+  checkSave(): boolean {
+    return this.save;
+  }
 }
 
 let dono = new UserEnhanced(3, 'dono', 'kasino', 'jakarta', 'f111', true);
@@ -124,20 +124,42 @@ console.log(dono.getSalary());
 console.log(dono.title('Mr '));
 
 class Custom {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 
-    constructor() {
-        this.x = 0;
-        this.y = 0;
-    }
-    setValue(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+  }
+  setValue(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
 }
 
 let x = new Custom();
 console.log(x);
 x.setValue(2, 3);
 console.log(x);
+
+interface IEmployee {
+  empCode: number;
+  name: string;
+  getSalary: (salary: number) => number;
+}
+
+class Employee implements IEmployee {
+  empCode: number;
+  name: string;
+
+  constructor(code: number, name: string) {
+    this.empCode = code;
+    this.name = name;
+  }
+
+  getSalary(empCode: number): number {
+    return 20000;
+  }
+}
+
+let emp = new Employee(1, 'Steve');

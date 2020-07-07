@@ -1,5 +1,6 @@
 # Bicara TypeScript
-This repo contain resource of Bicara Typescript. 
+
+This repo contain resource of Bicara Typescript.
 [Youtube Series for Learn Typescript](https://www.youtube.com/SastraNababan?sub_confirmation=1)
 
 ## 1. JavaScript vs TypeScript Types
@@ -53,11 +54,10 @@ How to declare typescript type :
 
 ## 3. Array & Tuples
 
-
 Tuples is an array with fixed size and known data types.
 
-
 There are few ways to declare an array:
+
 1. Using Type Inference
    `let list = [1, 2, 3, 4];`
 2. Using square brackets. `elementType[]`
@@ -65,15 +65,13 @@ There are few ways to declare an array:
 3. Using a generic array type. `Array<elementType>`
    `let fruits: Array<string> = ['Apple', 'Orange', 'Banana'];`
 
-
-
 ### Exercises :
 
-- [ ] Array of Number 
-- [ ] Array of String 
+- [ ] Array of Number
+- [ ] Array of String
 - [ ] Array with Union
-- [ ] Tuple 
-- [ ] Array of Object 
+- [ ] Tuple
+- [ ] Array of Object
 - [ ] Array multidimensional
 - [ ] Destructuring
 
@@ -96,12 +94,25 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 
 ### Exercises :
 
-- [ ] function declaration & expression
+- [ ] function basic : declaration,expression, arrow
 - [ ] optional & default parameters
 - [ ] rest parameter
 - [ ] conditional type with union, generic, overloads
 
-## 6. Classes
 
-## 7. Function
-## 8. Advance Types
+
+## 6. Classes
+- [ ] basic class
+- [ ] inheritance / sub-class
+- [ ] static & modifiers (private, public, readonly) 
+- [ ] abstract classes
+- [ ] interface
+
+
+
+
+
+
+
+
+ 
