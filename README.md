@@ -89,7 +89,14 @@ Object is a type that represents the non-primitive type, i.e. anything that is n
 
 ## 5. Functions
 
-`COMING SOON`
+Functions are the building blocks of readable, maintainable, and reusable code. A function is a set of statements to perform a specific task. Functions organize the program into logical blocks of code.
+
+### Exercises :
+
+- [ ] function basic : declaration,expression, arrow
+- [ ] optional & default parameters
+- [ ] rest parameter
+- [ ] conditional type with union, generic, overloads
 
 ## 6. Classes
 
