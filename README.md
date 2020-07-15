@@ -100,11 +100,24 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 
 ## 6. Classes
 
+- [ ] class basic : constructor, properties, method
+- [ ] access modifiers (private, public, readonly)
+- [ ] inheritance / sub-class
+- [ ] static member
+- [ ] abstract classes
+
+
+| access modifier | class | sub-class | instance |
+| --------------- | ----- | --------- | -------- |
+| public          | ✅     | ✅         | ✅        |
+| protected       | ✅     | ✅         | ❌        |
+| private         | ✅     | ❌         | ❌        |
+
+
+
+## 7. Interface vs Type
 `COMING SOON`
 
-## 7. Function
-
-`COMING SOON`
 
 ## 8. Advance Types
 
