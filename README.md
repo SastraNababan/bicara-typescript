@@ -106,19 +106,21 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 - [ ] static member
 - [ ] abstract classes
 
-
 | access modifier | class | sub-class | instance |
 | --------------- | ----- | --------- | -------- |
-| public          | ✅     | ✅         | ✅        |
-| protected       | ✅     | ✅         | ❌        |
-| private         | ✅     | ❌         | ❌        |
-
-
+| public          | ✅    | ✅        | ✅       |
+| protected       | ✅    | ✅        | ❌       |
+| private         | ✅    | ❌        | ❌       |
 
 ## 7. Interface vs Type
-`COMING SOON`
+
+| Feature              | Interface | Type |
+| -------------------- | --------- | ---- |
+| aliases              | ❌         | ✅    |
+| object               | ✅         | ✅    |
+| merge                | ✅         | ❌    |
+| Intersection & Union | ❌         | ✅    |
+| implementes          | ✅         | ✅    |
+| extend               | ✅         | ❌    |
 
 
-## 8. Advance Types
-
-`COMING SOON`
