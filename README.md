@@ -3,6 +3,11 @@
 This repo contain resource of Bicara Typescript.
 [Youtube Series for Learn Typescript](https://www.youtube.com/SastraNababan?sub_confirmation=1)
 
+
+**Branches :**
+`master` : starter code
+`finish` : finish code
+
 ## 1. JavaScript vs TypeScript Types
 
 |     | Javascript | Typescript   |
