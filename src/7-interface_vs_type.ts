@@ -89,7 +89,3 @@ class People implements Person {
     return 'yess';
   }
 }
-
-/**
- * Extend
- */

@@ -1,30 +1,33 @@
 /* eslint-disable prefer-const, @typescript-eslint/no-unused-vars */
 
-export {}; // quick fix for global variable
+/**
+ * Object User :
+ * - User have personal like such id, firstName, lastName
+ * - User have method such as login(), register()
+ * - Max Failed login = 5
+ */
+
+// class --> OOP ( Object Oriented Programming)
+// class --> Object Instance
+// Object Literal vs Object Instance
+
 abstract class Root {
-  // property (attributes, method )
-  // constructor
   abstract done: boolean;
-  abstract find(keyword: string): string;
 }
 
-// base class
 class User extends Root {
-  // properties : attributes & method
+  // access modifiers : public, private, protected
+  // properties
   id: number;
   firstName: string;
-  public lastName: string; // public field
-  private token: string; // private field
-  protected save: boolean; // protected
-  readonly numberofHeads: number = 1; // readonly attributes only
-  city = 'medan';
+  lastName: string;
+  protected save: boolean;
+  private token: string;
   static MAX_FAILED_LOGIN = 2;
   private retryLogin = 0;
-  done = false;
+  done: boolean;
 
-  find(keyword: string): string {
-    return 'result';
-  }
+  // method
   login(userName: string, password: string): boolean | string {
     this.retryLogin += 1;
     if (userName === 'admin' && password === 'admin') {
@@ -36,130 +39,40 @@ class User extends Root {
     return false;
   }
 
-  fullName(): string {
-    return this.firstName + '  ' + this.lastName;
-  }
+  register() {}
 
-  setToken(token: string) {
-    this.token = token;
-  }
-
-  getToken(): string {
-    return this.token;
-  }
-
-  constructor(id: number, firstName: string, lastName: string, token: string, save: boolean) {
+  constructor(id: number, firstName: string, lastName: string) {
     super();
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.token = token;
-    this.save = save;
+    this.save = false;
+    this.token = '';
+    this.done = false;
   }
 }
 
-// instance
-
-let jhon = new User(1, 'jhon', 'doe', 'fc101', true);
-let sinta = new User(2, 'sinta', 'ddd', 'fc102', true);
-// console.log(jhon.created_at);
-// console.log(jhon.updated_at);
-console.log(jhon);
-jhon.city = 'bandung';
-jhon.firstName = 'jojo';
-// jhon.numberofHeads = 2;
-// jhon = {
-//     id: 1,
-//     firstName: 'jhon',
-//     lastName: 'doe',
-//     // #token: 'fc101',
-//     save: true,
-// };
-
-User.MAX_FAILED_LOGIN = 5;
+User.MAX_FAILED_LOGIN = 3;
+let myUser = new User(1, 'john', 'dodo');
 console.log(User.MAX_FAILED_LOGIN);
-console.log(jhon.login('', ''));
-console.log(jhon.login('', ''));
-console.log(jhon.login('', ''));
-console.log(jhon.login('', ''));
-console.log(jhon.login('', ''));
+console.log(myUser.login('', ''));
+console.log(myUser.login('', ''));
+console.log(myUser.login('', ''));
+console.log(myUser.login('', ''));
+// myUser.
 
-console.log(sinta.login('', ''));
-console.log(sinta.login('', ''));
-console.log(sinta.login('', ''));
-console.log(sinta.login('', ''));
-console.log(sinta.login('', ''));
-
-console.log(jhon.fullName());
-console.log(sinta.firstName);
-
-// sub-class
-class UserEnhanced extends User {
+class EnhancementUser extends User {
   location: string;
-
-  constructor(id: number, firstName: string, lastName: string, location: string, token: string, save: boolean) {
-    super(id, firstName, lastName, token, save);
-    // console.log(super.save);
+  constructor(
+    location: string,
+    id: number,
+    firstName: string,
+    lastName: string,
+  ) {
+    super(id, firstName, lastName);
     this.location = location;
-    console.log(this);
-  }
-
-  getSalary(): number {
-    return 1000;
-  }
-
-  title(s: string): string {
-    return s + this.fullName();
-  }
-
-  checkSave(): boolean {
-    return this.save;
+    this.save;
   }
 }
 
-let dono = new UserEnhanced(3, 'dono', 'kasino', 'jakarta', 'f111', true);
-console.log(dono.checkSave());
-console.log(dono.firstName);
-console.log(dono.getSalary());
-console.log(dono.title('Mr '));
-
-class Custom {
-  x: number;
-  y: number;
-
-  constructor() {
-    this.x = 0;
-    this.y = 0;
-  }
-  setValue(x: number, y: number) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-let x = new Custom();
-console.log(x);
-x.setValue(2, 3);
-console.log(x);
-
-interface IEmployee {
-  empCode: number;
-  name: string;
-  getSalary: (salary: number) => number;
-}
-
-class Employee implements IEmployee {
-  empCode: number;
-  name: string;
-
-  constructor(code: number, name: string) {
-    this.empCode = code;
-    this.name = name;
-  }
-
-  getSalary(empCode: number): number {
-    return 20000;
-  }
-}
-
-let emp = new Employee(1, 'Steve');
+let myNewUser = new EnhancementUser('medan', 2, 'ucok', 'cool');
