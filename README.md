@@ -101,7 +101,7 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 ## 6. Classes
 
 - [ ] class basic : constructor, properties, method
-- [ ] access modifiers (private, public, readonly)
+- [ ] access modifiers (private, public, private)
 - [ ] inheritance / sub-class
 - [ ] static member
 - [ ] abstract classes
@@ -123,4 +123,12 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 | implementes          | ✅         | ✅    |
 | extend               | ✅         | ❌    |
 
-
+## 8. Advanced Type
+- [ ] Partial `Partial<T>`
+- [ ] Required `Required<T>`
+- [ ] Readonly  `Readonly<T>`
+- [ ] Pick `Pick<T, K>`
+- [ ] Omit `Omit<T, K>`
+- [ ] Record `Record<K,T>`
+- [ ] Extract `Extract<T, U>`
+- [ ] Exclude `Exclude<T,U>`
