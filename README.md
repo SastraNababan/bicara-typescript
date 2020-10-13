@@ -50,7 +50,6 @@ How to declare typescript type :
 - [ ] Union Type `|`
 - [ ] Type Aliases
 - [ ] Setup Environtment ( eslint, prettier )
-- [ ] Evaluate Typescript Config `tsconfig.json`
 
 ## 3. Array & Tuples
 
@@ -99,20 +98,37 @@ Functions are the building blocks of readable, maintainable, and reusable code. 
 - [ ] rest parameter
 - [ ] conditional type with union, generic, overloads
 
-
-
 ## 6. Classes
-- [ ] basic class
+
+- [ ] class basic : constructor, properties, method
+- [ ] access modifiers (private, public, readonly)
 - [ ] inheritance / sub-class
-- [ ] static & modifiers (private, public, readonly) 
+- [ ] static member
 - [ ] abstract classes
-- [ ] interface
 
+| access modifier | class | sub-class | instance |
+| --------------- | ----- | --------- | -------- |
+| public          | ✅    | ✅        | ✅       |
+| protected       | ✅    | ✅        | ❌       |
+| private         | ✅    | ❌        | ❌       |
 
+## 7. Interface vs Type
 
+| Feature              | Interface | Type |
+| -------------------- | --------- | ---- |
+| aliases              | ❌         | ✅    |
+| object               | ✅         | ✅    |
+| merge                | ✅         | ❌    |
+| Intersection & Union | ❌         | ✅    |
+| implementes          | ✅         | ✅    |
+| extend               | ✅         | ❌    |
 
-
-
-
-
- 
+## 8. Advanced Type
+- [ ] Partial `Partial<T>`
+- [ ] Required `Required<T>`
+- [ ] Readonly  `Readonly<T>`
+- [ ] Pick `Pick<T, K>`
+- [ ] Omit `Omit<T, K>`
+- [ ] Record `Record<K,T>`
+- [ ] Extract `Extract<T, U>`
+- [ ] Exclude `Exclude<T,U>`

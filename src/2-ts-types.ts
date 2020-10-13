@@ -30,8 +30,8 @@ f = Symbol('Sym'); // symbol
 
 let g: () => void;
 g = function () {
-    // function
-    return 123;
+  // function
+  return 123;
 };
 
 let h: null;
@@ -44,8 +44,8 @@ let j: []; // array .map, .push, .pop
 j = [];
 
 class Product {
-    // class
-    //...
+  // class
+  //...
 }
 
 let k = new Product(); // object
@@ -57,9 +57,9 @@ let k = new Product(); // object
 
 // with dynamic type comes great responsiblity
 function sum(a: number, b: number): void {
-    // todo: validation
-    // return a + b;
-    // return "12"
+  // todo: validation
+  // return a + b;
+  // return "12"
 }
 
 let arg1 = 4;
