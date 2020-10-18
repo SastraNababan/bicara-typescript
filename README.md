@@ -5,7 +5,9 @@ This repo contain resource of Bicara Typescript.
 
 
 **Branches :**
+
 `master` : starter code
+
 `finish` : finish code
 
 ## 1. JavaScript vs TypeScript Types
