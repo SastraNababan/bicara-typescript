@@ -6,9 +6,9 @@ This repo contain resource of Bicara Typescript.
 
 **Branches :**
 
-`master` : starter code
+`master` : [starter code](https://github.com/SastraNababan/bicara-typescript/tree/master)
 
-`finish` : finish code
+`finish` : [finish code](https://github.com/SastraNababan/bicara-typescript/tree/finish)
 
 ## 1. JavaScript vs TypeScript Types
 
