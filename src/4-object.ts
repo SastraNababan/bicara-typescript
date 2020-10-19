@@ -56,16 +56,18 @@ export {};
     {
       idCart: "C1",
       dateOrdered: "2020-05-20",
-      p1 :{
-        "id": "P-1",
-        "name": "Mechanical Keyboard",
-        "qty": 2
-      },
-      p2 :{
-        "id": "P-2",
-        "name": "USB Hub",
-        "qty": 1
-      },
+      items: {
+        p1 :{
+          "id": "P-1",
+          "name": "Mechanical Keyboard",
+          "qty": 2
+        },
+        p2 :{
+          "id": "P-2",
+          "name": "USB Hub",
+          "qty": 1
+        },
+      }
     }
 */
 
